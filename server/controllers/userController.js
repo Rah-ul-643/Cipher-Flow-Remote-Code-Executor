@@ -18,8 +18,8 @@ const loginController = async (req, res) => {
                     {
                         httpOnly: true,
                         maxAge: 2 * 24 * 60 * 60 * 1000, // 2 days
-                        secure: true, // Use `secure: true` in production
-                        sameSite: 'None',  // Allow cross-origin
+                        secure: false, // Use `secure: true` in production
+                        sameSite: 'Lax',  // Allow cross-origin
                     }
                 );
                 res.json({ token: token, success: true, message: "Logged in successfully" });
