@@ -19,7 +19,6 @@ jobs:
           debug : true
           script: |
             set -e
-            sudo su
             
             # Navigate to project folder
             cd /cipherFlow/Remote_Code_Executor/
@@ -34,8 +33,8 @@ jobs:
             npm run build
 
             # Copy frontend build to Nginx
-            rm -rf /var/www/html/*
-            cp -r build/* /var/www/html/
+            sudo rm -rf /var/www/html/*
+            sudo cp -r build/* /var/www/html/
             
              # Install backend dependencies
             cd ../server
