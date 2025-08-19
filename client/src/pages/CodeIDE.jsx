@@ -409,7 +409,7 @@ const CodeIDE = () => {
 
           <RightSecTopItem>
             <RightSecTopText>
-              Break free! Enter the Cypher Matrix...{' '}
+              Break free! Enter Cypher Matrix...{' '}
               <span style={{ fontWeight: 800 }}>&lt;CypherFlow /&gt;</span>
             </RightSecTopText>
           </RightSecTopItem>
