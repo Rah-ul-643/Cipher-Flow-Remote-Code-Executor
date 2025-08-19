@@ -11,36 +11,39 @@ jobs:
 
     steps:
       - name: SSH and deploy on EC2
-        uses: appleboy/ssh-action@v0.1.5
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
-          username: ubuntu
+          username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_KEY }}
+          debug : true
           script: |
             set -e
-
+            
             # Navigate to project folder
             cd /cipherFlow/Remote_Code_Executor/
 
             # Pull latest code
-            git pull origin main
+            git fetch --all
+            git reset --hard origin/main
 
             # Install frontend dependencies and build
-            cd ../client
+            cd client
             npm install
             npm run build
 
             # Copy frontend build to Nginx
-            rm -rf /var/www/html/*
-            cp -r build/* /var/www/html/
-
+            sudo rm -rf /var/www/html/*
+            sudo cp -r build/* /var/www/html/
+            
              # Install backend dependencies
-            cd server
+            cd ../server
             npm install --production
 
             # Restart backend using pm2
             pm2 restart myapp || pm2 start npm --name "myapp" -- run start
 
+          
             # Restart Nginx
             sudo nginx -t
             sudo systemctl restart nginx
