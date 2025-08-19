@@ -1,21 +1,31 @@
-# Remote Code Executor
+# Cipher Flow
 
-This project is a web-based application that allows users to write, compile, and execute code in various programming languages. It also includes an AI bot assistant powered by Gemini AI.
-
-## Demo
-[Insert Demo Link]
-
-## Authors
-- [Rahul](https://github.com/Rah-ul-643)
-- [Ankesh](https://github.com/Ankesh2004)
-- [Harshdeep](https://github.com/Harshjerry) 
+This Remote Code Executor is a web-based application designed to let users write, compile, and execute code in multiple programming languages directly from their browsers. This tool provides an interactive, efficient, and accessible platform for coding, testing, and collaboration, with AI assistance for guidance.
 
 ## Features
 
-- **Implemented Code Santization**
-- For each code run request, a separate Docker container is created which limits the interference with the host machine.
-- The parameters like Time taken to run the code and Total memory used have been limited, allowing efficient management of resources.
-- The code execution happens asynchronously, allowing the server to handle multiple requests at the same time.
+- **Multi-Language Support**:  
+  Supports various programming languages, including Python, JavaScript, C++, and Java. Each language runs in an isolated environment, ensuring security and reliability in execution.
+
+- **Multi-File System**:  
+  Users can create, manage, and execute projects that include multiple files, allowing for complex, multi-file applications to be developed within the platform. This feature is ideal for building modular codebases or applications with interdependent files.
+
+- **Security**:  
+  The platform prioritizes security by using sandboxing and containerization to isolate code execution environments, reducing the risks associated with running untrusted code. Additionally, rate limiting, input validation, and logging mechanisms are implemented to prevent misuse and enhance safety.
+
+- **Collaborative Coding**:  
+  Real-time collaboration enables multiple users to work on code together seamlessly, with features like shared cursors, live updates, and version history. This makes it easier for teams to work together, learn, and debug efficiently.
+
+- **AI Assistant**:  
+  An integrated chatbot powered by **Gemini AI** provides on-demand assistance with coding, debugging, and general programming questions. The AI assistant offers contextual help to improve productivity and guide users through coding challenges.
+
+
+## Demo
+- [Demo Video](https://drive.google.com/file/d/1LFYfSAr9pb31Lal4qivCkBhA45W8OH_y/view?usp=sharing)
+
+## Author
+- [Rahul](https://github.com/Rah-ul-643)
+
 
 ## Prerequisites
 - Docker
@@ -86,16 +96,6 @@ To run the project locally, you need to have Node.js and npm installed.
    node server.js
     ```
 
-## Screenshots
-![Screenshot 1](https://ibb.co/YfY6GYk)
-![Screenshot 2](https://ibb.co/rFxXSLf)
-![Screenshot 3](https://ibb.co/WnZLr13)
-![Screenshot 4](https://ibb.co/X2DXG09)
-![Screenshot 5](https://ibb.co/m59dmZb)
-![Screenshot 6](https://ibb.co/0G0dhj8)
-![Screenshot 7](https://ibb.co/6HxSpMN)
-![Screenshot 8](https://ibb.co/P9QXLKj)
-![Screenshot 9](https://ibb.co/vDyjsgp)
 
 
 ## Contributing
