@@ -65,6 +65,7 @@ To run the project locally, you need to have Node.js and npm installed.
    ```
    npm install
    ```
+   
 3. Run `npm start` to start the client. It will be available at http://localhost:3000.
    ```
    npm start
