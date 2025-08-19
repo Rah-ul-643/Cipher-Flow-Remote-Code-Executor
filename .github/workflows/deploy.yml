@@ -19,7 +19,8 @@ jobs:
           debug : true
           script: |
             set -e
-
+            sudo su
+            
             # Navigate to project folder
             cd /cipherFlow/Remote_Code_Executor/
 
