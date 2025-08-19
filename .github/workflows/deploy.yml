@@ -23,7 +23,8 @@ jobs:
             cd /cipherFlow/Remote_Code_Executor/
 
             # Pull latest code
-            git pull origin main
+            git fetch --all
+            git reset --hard origin/main
 
             # Install frontend dependencies and build
             cd ../client
