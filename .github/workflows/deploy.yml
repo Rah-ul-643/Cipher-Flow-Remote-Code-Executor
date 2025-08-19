@@ -33,7 +33,7 @@ jobs:
             # Copy frontend build to Nginx
             rm -rf /var/www/html/*
             cp -r build/* /var/www/html/
-
+            
              # Install backend dependencies
             cd server
             npm install --production
@@ -41,6 +41,8 @@ jobs:
             # Restart backend using pm2
             pm2 restart myapp || pm2 start npm --name "myapp" -- run start
 
+          
             # Restart Nginx
             sudo nginx -t
             sudo systemctl restart nginx
+          debug : true
